@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode colors */
+  --aviation-dark: hsl(0, 0%, 98%);
+  --aviation-surface: hsl(0, 0%, 95%);
+  --aviation-blue: hsl(221, 83%, 53%);
+  --aviation-text: hsl(0, 0%, 5%);
+  --aviation-text-muted: hsl(0, 0%, 35%);
+  --aviation-warning: hsl(38, 92%, 50%);
+  --aviation-success: hsl(142, 76%, 36%);
+  --aviation-error: hsl(0, 84%, 60%);
+  
+  /* Card and input backgrounds for light mode */
+  --card-background: hsl(0, 0%, 100%);
+  --input-background: hsl(0, 0%, 98%);
+  --border-color: hsl(0, 0%, 85%);
+}
+
+.dark {
+  /* Dark mode colors */
+  --aviation-dark: hsl(220, 13%, 9%);
+  --aviation-surface: hsl(220, 13%, 14%);
+  --aviation-blue: hsl(221, 83%, 53%);
+  --aviation-text: hsl(0, 0%, 98%);
+  --aviation-text-muted: hsl(0, 0%, 75%);
+  --aviation-warning: hsl(38, 92%, 50%);
+  --aviation-success: hsl(142, 76%, 36%);
+  --aviation-error: hsl(0, 84%, 60%);
+  
+  /* Card and input backgrounds for dark mode */
+  --card-background: hsl(220, 13%, 14%);
+  --input-background: hsl(220, 13%, 12%);
+  --border-color: hsl(220, 9%, 25%);
+}
+
+/* iOS App Formatting */
+.ios-safe-area {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.ios-input {
+  -webkit-appearance: none;
+  border-radius: 12px;
+  font-size: 16px; /* Prevents zoom on iOS */
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.ios-input:focus {
+  outline: none;
+  border-color: #007AFF;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+}
+
+.ios-select {
+  -webkit-appearance: none;
+  border-radius: 12px;
+  font-size: 16px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.ios-dropdown {
+  background: rgba(28, 28, 30, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+}
+
+.ios-dropdown-item {
+  color: white !important;
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+.ios-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ios-dropdown-item[data-highlighted] {
+  background: rgba(0, 122, 255, 0.3);
+  color: white !important;
+}
+
+/* iOS Card Styling */
+.ios-card {
+  border-radius: 16px;
+  background: var(--card-background);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: var(--aviation-text) !important;
+}
+
+.dark .ios-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* iOS Button Styling */
+.ios-button {
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ios-button-primary {
+  background: #007AFF;
+  color: white;
+  border: none;
+}
+
+.ios-button-primary:hover {
+  background: #0056CC;
+  transform: translateY(-1px);
+}
+
+.ios-button-primary:active {
+  transform: translateY(0);
+}
+
+/* iOS Tab Bar Styling */
+.ios-tab-bar {
+  background: rgba(28, 28, 30, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* iOS Navigation Styling */
+.ios-nav {
+  background: rgba(28, 28, 30, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Touch Screen Compatibility */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.touch-button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+
+.touch-button:active {
+  transform: scale(0.95);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.touch-input {
+  touch-action: manipulation;
+  font-size: 16px; /* Prevents zoom on iOS */
+  padding: 12px 16px;
+  min-height: 44px;
+}
+
+.touch-card {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.touch-card:active {
+  transform: scale(0.98);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Swipe gestures */
+.swipeable {
+  touch-action: pan-x pan-y;
+}
+
+.no-scroll {
+  touch-action: none;
+  overflow: hidden;
+}
+
+/* Large touch targets for accessibility */
+.large-touch {
+  min-height: 60px;
+  min-width: 60px;
+  padding: 16px;
+}
+
+/* Responsive Typography for iOS */
+@media (max-width: 768px) {
+  .ios-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .ios-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .ios-body {
+    font-size: 0.875rem;
+  }
+
+  /* Enhanced touch targets on mobile */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .touch-input {
+    font-size: 16px;
+    padding: 14px 18px;
+    min-height: 48px;
+  }
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222.2, 84%, 4.9%);
+  --radius: 0.5rem;
+  
+  /* Aviation theme colors */
+  --aviation-dark: hsl(222, 47%, 11%);
+  --aviation-surface: hsl(217, 33%, 17%);
+  --aviation-card: hsl(215, 25%, 27%);
+  --aviation-blue: hsl(207, 90%, 54%);
+  --aviation-blue-hover: hsl(207, 90%, 47%);
+  --aviation-success: hsl(142, 76%, 36%);
+  --aviation-warning: hsl(38, 92%, 50%);
+  --aviation-text: hsl(210, 40%, 98%);
+  --aviation-text-muted: hsl(215, 20.2%, 65.1%);
+}
+
+.dark {
+  --background: hsl(222, 47%, 11%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 33%, 17%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222, 47%, 11%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(217, 33%, 17%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 33%, 17%);
+  --input: hsl(217, 33%, 17%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(217, 33%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 33%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212.7, 26.8%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[var(--aviation-dark)] text-[var(--aviation-text)] font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .aviation-surface {
+    background-color: var(--aviation-surface);
+  }
+  
+  .aviation-card {
+    background-color: var(--aviation-card);
+  }
+  
+  .aviation-blue {
+    background-color: var(--aviation-blue);
+  }
+  
+  .aviation-blue-hover:hover {
+    background-color: var(--aviation-blue-hover);
+  }
+  
+  .aviation-text {
+    color: var(--aviation-text);
+  }
+  
+  .aviation-text-muted {
+    color: var(--aviation-text-muted);
+  }
+}

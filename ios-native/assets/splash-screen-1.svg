@@ -1,0 +1,103 @@
+<svg width="375" height="812" viewBox="0 0 375 812" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="splashBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aircraftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Full screen background -->
+  <rect width="375" height="812" fill="url(#splashBg1)"/>
+  
+  <!-- Top decorative elements -->
+  <g opacity="0.1">
+    <circle cx="50" cy="100" r="30" fill="#ffffff"/>
+    <circle cx="320" cy="150" r="20" fill="#fbbf24"/>
+    <circle cx="300" cy="80" r="15" fill="#10b981"/>
+  </g>
+  
+  <!-- Main aircraft illustration -->
+  <g transform="translate(187.5,250)">
+    <!-- Aircraft shadow -->
+    <g transform="translate(4,4)" opacity="0.3">
+      <ellipse cx="0" cy="0" rx="80" ry="15" fill="#000000"/>
+      <ellipse cx="0" cy="0" rx="120" ry="6" fill="#000000"/>
+    </g>
+    
+    <!-- Main aircraft -->
+    <g filter="url(#glow)">
+      <!-- Fuselage -->
+      <ellipse cx="0" cy="0" rx="80" ry="15" fill="url(#aircraftGrad)"/>
+      <!-- Wings -->
+      <ellipse cx="0" cy="0" rx="120" ry="6" fill="url(#aircraftGrad)"/>
+      <!-- Tail -->
+      <polygon points="-75,0 -90,-12 -90,12" fill="url(#aircraftGrad)"/>
+      <!-- Nose -->
+      <ellipse cx="75" cy="0" rx="12" ry="6" fill="#f1f5f9"/>
+      <!-- Cockpit windows -->
+      <ellipse cx="65" cy="0" rx="8" ry="4" fill="#3b82f6"/>
+    </g>
+  </g>
+  
+  <!-- Flight path animation lines -->
+  <g stroke="#fbbf24" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 50 350 Q 150 330 250 340 Q 300 345 350 330">
+      <animate attributeName="stroke-dasharray" values="0,200;50,150;100,100" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 30 380 Q 100 400 200 390 Q 280 380 340 400">
+      <animate attributeName="stroke-dasharray" values="0,200;50,150;100,100" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Location markers -->
+  <g fill="#10b981">
+    <circle cx="50" cy="350" r="6">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="330" r="6">
+      <animate attributeName="r" values="6;8;6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="380" r="6">
+      <animate attributeName="r" values="6;8;6" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- App title -->
+  <g transform="translate(187.5,450)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#ffffff">AMC</text>
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#fbbf24">MISSION TRACKER</text>
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#94a3b8">AIR MOBILITY COMMAND</text>
+  </g>
+  
+  <!-- Loading indicator -->
+  <g transform="translate(187.5,600)">
+    <circle cx="-20" cy="0" r="4" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0s"/>
+    </circle>
+    <circle cx="0" cy="0" r="4" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+    <circle cx="20" cy="0" r="4" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+  </g>
+  
+  <!-- Bottom security notice -->
+  <g transform="translate(187.5,720)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748b">U.S. GOVERNMENT SYSTEM</text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">AUTHORIZED USE ONLY</text>
+  </g>
+</svg>

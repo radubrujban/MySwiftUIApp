@@ -1,0 +1,69 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="wings" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#cbd5e1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded background -->
+  <rect width="1024" height="1024" rx="200" ry="200" fill="url(#bg2)"/>
+  
+  <!-- Globe/Earth background -->
+  <circle cx="512" cy="400" r="280" fill="#1e40af" opacity="0.3"/>
+  <circle cx="512" cy="400" r="250" fill="#1e40af" opacity="0.2"/>
+  
+  <!-- Continental outlines -->
+  <g fill="#3b82f6" opacity="0.4">
+    <path d="M 400 350 Q 450 320 500 350 Q 520 360 530 380 Q 540 400 520 420 Q 480 430 450 410 Q 420 390 400 350 Z"/>
+    <path d="M 550 380 Q 580 370 610 390 Q 630 410 620 440 Q 600 450 580 440 Q 560 420 550 380 Z"/>
+  </g>
+  
+  <!-- Aircraft -->
+  <g transform="translate(512,400)">
+    <!-- Main fuselage -->
+    <rect x="-80" y="-8" width="160" height="16" rx="8" fill="url(#wings)"/>
+    <!-- Wings -->
+    <rect x="-120" y="-4" width="240" height="8" rx="4" fill="url(#wings)"/>
+    <!-- Tail -->
+    <polygon points="-85,0 -100,-12 -100,12" fill="url(#wings)"/>
+    <!-- Cockpit -->
+    <circle cx="75" cy="0" r="10" fill="#f1f5f9"/>
+  </g>
+  
+  <!-- Navigation compass -->
+  <g transform="translate(200,200)" opacity="0.8">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#fbbf24" stroke-width="3"/>
+    <text x="0" y="-40" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#fbbf24">N</text>
+    <text x="40" y="6" font-family="Arial" font-size="16" text-anchor="middle" fill="#fbbf24">E</text>
+    <text x="0" y="50" font-family="Arial" font-size="16" text-anchor="middle" fill="#fbbf24">S</text>
+    <text x="-40" y="6" font-family="Arial" font-size="16" text-anchor="middle" fill="#fbbf24">W</text>
+    <!-- Compass needle -->
+    <polygon points="0,-35 5,0 0,35 -5,0" fill="#ef4444"/>
+  </g>
+  
+  <!-- Mission checklist -->
+  <g transform="translate(750,200)" opacity="0.9">
+    <rect x="-40" y="-50" width="80" height="100" rx="8" fill="#374151"/>
+    <rect x="-35" y="-45" width="70" height="90" rx="4" fill="#f9fafb"/>
+    <!-- Checklist items -->
+    <line x1="-25" y1="-30" x2="25" y2="-30" stroke="#10b981" stroke-width="3"/>
+    <line x1="-25" y1="-10" x2="25" y2="-10" stroke="#10b981" stroke-width="3"/>
+    <line x1="-25" y1="10" x2="25" y2="10" stroke="#6b7280" stroke-width="2"/>
+    <line x1="-25" y1="30" x2="25" y2="30" stroke="#6b7280" stroke-width="2"/>
+    <!-- Checkmarks -->
+    <text x="-30" y="-25" font-family="Arial" font-size="16" fill="#10b981">✓</text>
+    <text x="-30" y="-5" font-family="Arial" font-size="16" fill="#10b981">✓</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="512" y="800" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="#ffffff">MISSION</text>
+  <text x="512" y="850" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="#fbbf24">TRACKER</text>
+  <text x="512" y="900" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#94a3b8">AIR MOBILITY COMMAND</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg width="375" height="812" viewBox="0 0 375 812" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean minimalist background -->
+  <defs>
+    <linearGradient id="cleanBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.1)"/>
+    </filter>
+  </defs>
+  
+  <!-- Light background -->
+  <rect width="375" height="812" fill="url(#cleanBg)"/>
+  
+  <!-- Top accent strip -->
+  <rect width="375" height="8" fill="url(#accent)"/>
+  
+  <!-- Main logo container -->
+  <g transform="translate(187.5,280)">
+    <!-- Logo background circle -->
+    <circle cx="0" cy="0" r="70" fill="#ffffff" filter="url(#shadow)"/>
+    <circle cx="0" cy="0" r="65" fill="url(#accent)" opacity="0.05"/>
+    
+    <!-- Aircraft icon -->
+    <g transform="scale(1.2)">
+      <!-- Modern aircraft silhouette -->
+      <path d="M -40,0 L -30,-3 L 20,-2 L 35,0 L 20,2 L -30,3 Z" fill="url(#accent)"/>
+      <path d="M -45,0 L -25,-15 L -20,-3 L -25,3 L -25,15 Z" fill="url(#accent)"/>
+      <circle cx="25" cy="0" r="3" fill="#1e40af"/>
+    </g>
+    
+    <!-- Orbital rings -->
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.2"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#3b82f6" stroke-width="0.5" opacity="0.1"/>
+  </g>
+  
+  <!-- Clean typography -->
+  <g transform="translate(187.5,420)">
+    <text x="0" y="0" font-family="SF Pro Display, -apple-system, sans-serif" font-size="38" font-weight="300" text-anchor="middle" fill="#1e293b">AMC</text>
+    <text x="0" y="45" font-family="SF Pro Display, -apple-system, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#3b82f6">Mission Tracker</text>
+    <text x="0" y="70" font-family="SF Pro Display, -apple-system, sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#64748b">Air Mobility Command</text>
+  </g>
+  
+  <!-- Minimal loading indicator -->
+  <g transform="translate(187.5,540)">
+    <circle cx="-15" cy="0" r="3" fill="#3b82f6" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite" begin="0s"/>
+    </circle>
+    <circle cx="0" cy="0" r="3" fill="#3b82f6" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="15" cy="0" r="3" fill="#3b82f6" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+  </g>
+  
+  <!-- Bottom branding -->
+  <g transform="translate(187.5,720)">
+    <text x="0" y="0" font-family="SF Pro Display, -apple-system, sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#94a3b8">Official U.S. Air Force Application</text>
+    <text x="0" y="18" font-family="SF Pro Display, -apple-system, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#cbd5e1">Version 1.0.0</text>
+  </g>
+</svg>

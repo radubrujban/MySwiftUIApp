@@ -1,0 +1,30 @@
+{
+  "name": "AMCMissionTracker",
+  "displayName": "AMC Mission Tracker",
+  "description": "Air Mobility Command Mission Tracking Application for flight operations and crew management",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./assets/icon.png",
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#1f2937"
+  },
+  "platforms": ["ios"],
+  "ios": {
+    "bundleIdentifier": "com.amc.missiontracker",
+    "buildNumber": "1",
+    "supportsTablet": true,
+    "requireFullScreen": false,
+    "infoPlist": {
+      "NSCameraUsageDescription": "This app uses the camera to scan mission documents and capture flight-related photos.",
+      "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to save and retrieve mission-related images.",
+      "NSLocationWhenInUseUsageDescription": "This app uses location services to calculate accurate flight distances and verify airport positions."
+    }
+  },
+  "permissions": [
+    "CAMERA",
+    "PHOTO_LIBRARY",
+    "LOCATION"
+  ]
+}
